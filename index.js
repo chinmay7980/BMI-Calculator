@@ -1,14 +1,9 @@
-function bmi() {
-    const h =document.getElementById('height').value;
-    const w =document.getElementById('weight').value;
-    if(h=='' || w==''){
-        document.getElementById('result').innerHTML =``;
-        document.getElementById('error').innerHTML = `Please Enter Height and Weight`
-    }else{
-        document.getElementById('error').innerHTML =``
-        const bmi =w/(h/100 *h/100);
-        const total =bmi.toFixed(2);
-        document.getElementById('result').innerHTML =`Your BMI is ${total}`
-    }
-    
-}
+```javascript
+document.getElementById('bmi-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const weight = parseFloat(document.getElementById('weight').value);
+  const height = parseFloat(document.getElementById('height').value);
+  const bmi = weight / (height * height);
+  document.getElementById('result').innerText = `Your BMI is ${bmi.toFixed(2)}.`;
+});
+```
