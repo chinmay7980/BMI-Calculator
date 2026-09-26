@@ -1,9 +1,11 @@
-```javascript
-document.getElementById('bmi-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-  const weight = parseFloat(document.getElementById('weight').value);
-  const height = parseFloat(document.getElementById('height').value);
-  const bmi = weight / (height * height);
-  document.getElementById('result').innerText = `Your BMI is ${bmi.toFixed(2)}.`;
-});
-```
+<script>
+function login() {
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+  if (email === 'admin@example.com' && password === 'password123') {
+    alert('Login successful!');
+  } else {
+    alert('Invalid credentials. Please try again.');
+  }
+}
+</script>
