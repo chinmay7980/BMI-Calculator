@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-// Background image path – adjust if the component is moved
-const backgroundImage = "/images/everything-you-need-know-about-fitness-1440x810.jpg";
-
 const categories = [
   { max: 18.5, label: "Underweight", quote: "Dream big, work hard – even underweight champions rise!" },
   { max: 24.9, label: "Normal", quote: "Peak fitness achieved. You have the discipline of CR7! SIUUU!" },
@@ -69,10 +66,7 @@ export default function BmiCalculator() {
   };
 
   return (
-    <div
-      className="min-h-screen bg-cover bg-center flex items-center justify-center relative"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
+    <div className="min-h-screen bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 flex items-center justify-center relative">
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative bg-white/10 backdrop-blur-md rounded-xl p-6 max-w-md w-full mx-4 text-white">
